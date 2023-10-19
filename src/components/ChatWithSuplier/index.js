@@ -129,7 +129,9 @@ export default function ChatWithSuplier({navigation}) {
                 <View>
                     <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center"
                     , backgroundColor: "#1BA9FF", paddingHorizontal: 15, paddingVertical: 15}}>
-                        <Pressable>
+                        <Pressable
+                            onPress={()=>navigation.goBack()}
+                        >
                             <Image
                                 source={require("../../../assets/btnBack.png")}
                                 resizeMode='contain'

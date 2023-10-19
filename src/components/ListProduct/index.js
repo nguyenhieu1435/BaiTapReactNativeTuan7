@@ -1,5 +1,7 @@
 import { View, Text, StatusBar, SafeAreaView, ScrollView, Pressable, Image, TextInput, FlatList } from 'react-native'
 import React, { useState } from 'react'
+import { Octicons } from '@expo/vector-icons';
+
 
 export default function ListProduct() {
     const [datas, setDatas] = useState([
@@ -109,7 +111,9 @@ export default function ListProduct() {
                 <View>
                     <View style={{backgroundColor: "#1BA9FF", paddingHorizontal: 15, paddingVertical: 14
                 , flexDirection: "row" ,alignItems: "center", justifyContent: "space-between"}}>
-                        <Pressable>
+                        <Pressable
+                            onPress={()=>navigation.goBack()}
+                        >
                             <Image
                                 source={require("../../../assets/btnBack.png")}
                                 resizeMode='contain'
