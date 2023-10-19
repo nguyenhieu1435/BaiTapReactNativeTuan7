@@ -1,20 +1,22 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ChatWithSuplier from './src/components/ChatWithSuplier';
+import ListProduct from './src/components/ListProduct';
+
+const BottomTab = createBottomTabNavigator();
 
 export default function App() {
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <BottomTab.Navigator screenOptions={{headerShown: false}}>
+        <BottomTab.Screen name='ChatWithSuplier' component={ChatWithSuplier}/>
+        <BottomTab.Screen name='ListProduct' component={ListProduct}/>
+        
+      </BottomTab.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
