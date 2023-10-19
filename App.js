@@ -12,9 +12,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <BottomTab.Navigator screenOptions={{headerShown: false}}>
-        <BottomTab.Screen name='ChatWithSuplier' component={ChatWithSuplier}/>
         <BottomTab.Screen name='ListProduct' component={ListProduct}/>
-        
+        <BottomTab.Screen name='ChatWithSuplier' component={ChatWithSuplier}/>
       </BottomTab.Navigator>
     </NavigationContainer>
   );
